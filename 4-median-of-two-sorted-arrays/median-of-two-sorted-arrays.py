@@ -3,15 +3,20 @@ class Solution:
 
         length = len(nums1) + len(nums2)
 
+        # Combine the arrays
         for num in nums2:
             nums1.append(num)
         
+        # Sort the integers in array (ascending order)
         nums1.sort()
         
+        # If odd number of elements, return middle number
         if length % 2 != 0:
             med = length // 2
             return nums1[med]
+
+        # If even number of elements, return mean of middle numbers
         else:
-            median = (length // 2) - 1
+            median = (length // 2) - 1 # 0-based indexing
             med = (nums1[median] + nums1[median + 1]) / 2
-            return float(med)
+            return med

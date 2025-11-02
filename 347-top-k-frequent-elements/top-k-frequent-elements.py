@@ -4,6 +4,7 @@ class Solution:
 
         # Returns a 'dictionary' like {1: 3, 2: 2}
         counts = Counter(nums)
+        
         # Returns a nested list of most common items, [[1,3],[2,2]]
         m = counts.most_common(k)
 
